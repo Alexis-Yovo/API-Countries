@@ -155,6 +155,12 @@ const filterCountries = (e) => {
   });
 };
 
+// Ignorer les accents dans le filtrage
+const removeAccents = (str) => {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+};
+
+
 // Ajouter un gestionnaire d'événements pour la barre de recherche
 document.getElementById("search-bar").addEventListener("input", filterCountries);
 
