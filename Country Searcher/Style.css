@@ -1,0 +1,97 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-image: url("./Images/Desert.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+h1 {
+  margin: 0 auto;
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+h2,
+h3 {
+  color: white;
+}
+.countries {
+  max-width: 1440px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.country-div {
+  background: darkblue;
+  border: 1px solid burlywood;
+  padding: 15px;
+}
+img {
+  max-width: 70%;
+  height: 150px;
+  margin-left: 10%;
+}
+/* Barre de recherche */
+#search-bar {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color:#000;
+}
+::placeholder, #search-bar {
+  color: white;
+}
+
+/* Bouton de tri */
+.sort-button-container {
+  position: relative;
+  text-align: right;
+  margin-right: 20px;
+}
+#sort-button {
+  width: 10%;
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top:10px;
+}
+#sort-options {
+  position: absolute;
+  right: 0;
+  background-color: #000;
+  color: white;
+  border: 1px solid #fff;
+  padding: 10px;
+  display: none;
+}
+#sort-options button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  padding: 5px;
+}
+#sort-options button:hover {
+  background-color: #555;
+}
+
+
+
+@media screen and (max-width: 576px) {
+  .countries {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .country-div {
+    width: 40%;
+  }
+}
